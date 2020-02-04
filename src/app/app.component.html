@@ -1,0 +1,16 @@
+<app-header ></app-header>
+<div style = "position:relative; left:205px; top:80px;">
+  This div has relative positioning.
+</div>
+
+<app-side-navigation (featureSelected)="onNavigate($event)"></app-side-navigation>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+        <app-create-offer *ngIf="loadedFeature==='creating'"></app-create-offer>
+        <app-show-offer *ngIf="loadedFeature==='creating'"></app-show-offer>
+        
+    </div>
+  </div>
+  
+</div>
